@@ -1,30 +1,31 @@
 import PropTypes from 'prop-types';
+import css from './Profile.module.css';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => (
-<div class="profile">
-  <div class="description">
+<div class={css.profile}>
+  <div class={css.description}>
     <img
       src={avatar}
       alt="User avatar"
-      class="avatar"
+      class={css.avatar}
     />
-    <p class="name">{username}</p>
-    <p class="tag">@{tag}</p>
-    <p class="location">{location}</p>
+    <p class={css.name}>{username}</p>
+    <p class={css.tag}>@{tag}</p>
+    <p class={css.location}>{location}</p>
   </div>
 
-  <ul class="stats">
+  <ul class={css.stats}>
     <li>
-      <span class="label">Followers</span>
-      <span class="quantity">{stats.followers}</span>
+      <span class={css.label}>Followers</span>
+      <span class={css.quantity}>{stats.followers}</span>
     </li>
     <li>
-      <span class="label">Views</span>
-      <span class="quantity">{stats.views}</span>
+      <span class={css.label}>Views</span>
+      <span class={css.quantity}>{stats.views}</span>
     </li>
     <li>
-      <span class="label">Likes</span>
-      <span class="quantity">{stats.likes}</span>
+      <span class={css.label}>Likes</span>
+      <span class={css.quantity}>{stats.likes}</span>
     </li>
   </ul>
 </div>
